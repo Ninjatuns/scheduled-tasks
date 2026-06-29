@@ -3,8 +3,8 @@ import pandas
 import datetime as dt
 import random
 import smtplib
-my_email="hanbetemail@gmail.com"
-password="mcsixnjpelovzljy"
+MY_EMAIL = os.environ.get("MY_EMAIL")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 connection=smtplib.SMTP("smtp.gmail.com")
 connection.starttls()
 connection.login(user=my_email,password=password)
